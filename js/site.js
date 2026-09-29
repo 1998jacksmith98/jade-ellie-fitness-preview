@@ -119,6 +119,11 @@ if (!reduce) {
   video.addEventListener("loadeddata", arm, { once: true });
   window.addEventListener("touchstart", arm, { once: true, passive: true });
   window.addEventListener("click", arm, { once: true });
+  video.addEventListener("ended", () => {
+    if (!video.duration) return;
+    video.pause();
+    video.currentTime = video.duration * 0.88;
+  });
   let ticking = false;
   const update = () => {
     ticking = false;
@@ -127,7 +132,9 @@ if (!reduce) {
     const run = track.offsetHeight - window.innerHeight;
     if (run <= 0) return;
     const scrolled = Math.min(Math.max(-rect.top, 0), run);
-    const t = (scrolled / run) * Math.max(video.duration - 0.05, 0);
+    const start = video.duration * 0.04;
+    const end = video.duration * 0.88;
+    const t = start + (scrolled / run) * (end - start);
     if (Math.abs(video.currentTime - t) > 0.03) {
       try { video.currentTime = t; } catch (e) {}
     }
