@@ -1,0 +1,17 @@
+filename | source URL | slide# if carousel | description
+logo.jpg | https://bookwhen.com/jadeelliefitness (header image, cloudfront original 943x305) | n/a | Wordmark logo: "JADE ELLIE / FITNESS / PERSONAL TRAINER & PILATES INSTRUCTOR" charcoal + taupe on cream
+owner-landing-01.jpg | https://www.instagram.com/p/Cz8jUDcoN5P/ | 1 of 2 | MAIN LANDING (Jack-specified). Jade full-length mirror selfie in blue sports bra/shorts, Wanderlust Fitness Village Bali, Nov 2023. Full original 1440x1800 (slide 2 is a video)
+owner-landing-02.jpg | https://www.instagram.com/p/DMDY0efoxwJ/ | 1 | Jade smiling, face clearly visible, brown outfit, outdoor golden-hour (birthday post "here's to 25"). Good about/landing portrait
+action-01.jpg | https://www.instagram.com/p/DETRSv6oYrq/ | 1 | PT/group session in gym - clients training (lunges, cable, bike), client with dumbbells on bench
+action-02.jpg | https://www.instagram.com/p/DETRSv6oYrq/ | 3 | Two clients doing dumbbell RDLs in gym (clients 2024 post)
+action-03.jpg | https://www.instagram.com/p/DETRSv6oYrq/ | 5 | Client doing lunge + overhead dumbbell press, gym
+action-04.jpg | https://www.instagram.com/p/DDsadcPuMKO/ | 4 | Girls group class, MAD Studio Sidcup (neon "We're all MAD here" sign)
+action-05.jpg | https://www.instagram.com/p/DCPlxHbuM9T/ | 1 | "Girl gang" Saturday group class, group photo in neon studio (@madstudiosidcup)
+action-06.jpg | https://www.instagram.com/p/DZkffx6is1A/ | 1 | Reformer Pilates class group photo at Salus House, Sidcup
+action-07.jpg | https://www.instagram.com/p/DV1y-gPigry/ | 2 | Reformer Pilates group class in session, Salus House
+action-08.jpg | https://www.instagram.com/p/DU_LeV_iunV/ | 1 | Jade on a reformer (qualified reformer pilates instructor announcement) - mirror selfie
+action-09.jpg | https://www.instagram.com/stories/highlights/17955353975247320/ ("pt sessions" highlight, story pk 3629335350782067404) | story 9 | Jade + client in gym, overlay text "Train with a friend & split the cost! Message me for more info on PT sessions" (1179x2096 story original)
+action-10.jpg | https://www.instagram.com/p/DJR_0BpouJl/ | 1 | Jade on HYROX London podium (2nd place, 1:08 PB)
+../videos/jade-ellie-reel.mp4 | https://www.instagram.com/reel/DdVx5gds-0t/ | n/a | Reel "It's not just about how your body looks..." 720x1280 H.264 + AAC, 12.3s
+../brand/font-evidence/DS71qcsDKCQ-overlay.jpg | https://www.instagram.com/p/DS71qcsDKCQ/ | 1 | Font evidence: "NOW IT'S YOUR TURN TO BECOME / the best VERSION OF YOU" overlay
+../brand/font-evidence/DSukvwHimvU-overlay.jpg | https://www.instagram.com/p/DSukvwHimvU/ | 1 | Font evidence: "BECOME THE BEST VERSION OF YOU / train with me / 1:1, with a friend, or join a class"

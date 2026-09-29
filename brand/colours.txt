@@ -1,0 +1,14 @@
+Jade Ellie Fitness - brand colours
+Sampled from logo (photos/logo.jpg, from bookwhen.com/jadeelliefitness) unless noted.
+
+PRIMARY    #3E3B38  RGB(62, 59, 56)     Warm charcoal - "JADE ELLIE" wordmark text
+SECONDARY  #93897F  RGB(147, 137, 127)  Warm taupe/greige - "FITNESS" + divider lines
+SECONDARY2 #9D958C  RGB(157, 149, 140)  Lighter taupe - "PERSONAL TRAINER & PILATES INSTRUCTOR" strapline
+BACKGROUND #F3EDE7  RGB(243, 237, 231)  Cream / warm off-white - logo background
+
+ACCENTS (eyeballed from typical posts, NOT pixel-sampled - treat as approximate):
+ACCENT     #F4B6C8  RGB(244, 182, 200)  Soft blush pink - "girl gang"/Girls Club theme, pink hearts in captions, pink grip socks
+ACCENT     #5A3E33  RGB(90, 62, 51)     Chocolate/mocha brown - reformer outfits, earthy lifestyle shots (matches neutral logo palette)
+ACCENT     #FFFFFF  RGB(255, 255, 255)  White text overlays on photos (story/post overlays)
+Note: neon pink/blue in many class photos comes from MAD Studio Sidcup's lighting, not Jade's brand.
+Overall feel: neutral, minimal, "clean girl" luxe - cream/charcoal/taupe with blush pink accent.

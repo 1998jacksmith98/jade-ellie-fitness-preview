@@ -1,0 +1,23 @@
+Jade Ellie Fitness - font observations (guesses; no official brand guide found)
+
+1) LOGO WORDMARK "JADE ELLIE" - high-contrast, widely letter-spaced serif caps (Didone/transitional feel, J descends below baseline).
+   Appears similar to: Cormorant Garamond (Medium/SemiBold) or Bodoni Moda / Playfair Display caps with wide tracking.
+   Evidence: https://bookwhen.com/jadeelliefitness (header logo) -> brand/font-evidence/bookwhen-logo.jpg
+
+2) LOGO "FITNESS" + "PERSONAL TRAINER & PILATES INSTRUCTOR" - light geometric sans, all caps, wide tracking.
+   Appears similar to: Montserrat Light / Regular (alt: Josefin Sans, Poppins Light).
+   Evidence: same logo.
+
+3) POST OVERLAY italic serif "the best" - elegant high-contrast italic serif.
+   Appears similar to: Playfair Display Italic (or Canva "Brittany"-free alternative: "Gilda"/"DM Serif Display Italic").
+   Evidence: https://www.instagram.com/p/DS71qcsDKCQ/ -> brand/font-evidence/DS71qcsDKCQ-overlay.jpg
+   Paired with thin sans caps "VERSION OF YOU" (similar to Montserrat Light / Roboto Light) and bold sans caps "NOW IT'S YOUR TURN TO BECOME" (similar to Roboto/Montserrat SemiBold).
+
+4) POST OVERLAY script "train with me" - handwritten/script lowercase.
+   Appears similar to a Canva script (e.g. "Allura"/"Great Vibes"-style) - exact font GAP.
+   Evidence: https://www.instagram.com/p/DSukvwHimvU/ -> brand/font-evidence/DSukvwHimvU-overlay.jpg
+
+5) Story highlight covers are photos (no text). Story overlays use Instagram's native fonts (Classic / Typewriter-style small text).
+6) Bio uses Unicode bold serif "𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋 𝐓𝐑𝐀𝐈𝐍𝐄𝐑" (Mathematical Bold) - not a real font choice.
+
+GAP: exact font names unconfirmed - ask Jade for the logo source file (logo filename suggests it was generated in ChatGPT, May 2026) and Canva brand kit.
