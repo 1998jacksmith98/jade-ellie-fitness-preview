@@ -286,6 +286,7 @@ footer a { color: #fff; text-decoration: none; }
   }
 }
 @media (max-width: 819px) {
+  .hero .btn-row { display: none; }
   .mobile-cta { display: flex; }
   body { padding-bottom: 84px; }
   .hero {
