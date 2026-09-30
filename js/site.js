@@ -111,10 +111,12 @@ if (!reduce) {
   if (!track || !video) return;
 
   video.muted = true;
+  video.loop = false;
   video.setAttribute("playsinline", "");
   video.setAttribute("webkit-playsinline", "");
 
   const arm = () => {
+    video.muted = true;
     const play = video.play();
     if (play && play.then) {
       play.then(() => {
@@ -124,18 +126,31 @@ if (!reduce) {
   };
 
   video.addEventListener("loadeddata", arm, { once: true });
-  window.addEventListener("touchstart", arm, { once: true, passive: true });
-  window.addEventListener("click", arm, { once: true });
+  window.addEventListener("touchstart", arm, { passive: true });
+  window.addEventListener("click", arm);
+  video.addEventListener("ended", () => {
+    video.pause();
+    if (video.duration) video.currentTime = Math.max(video.duration * 0.9, 0);
+    arm();
+  });
+
+  const seen = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) arm();
+    });
+  }, { threshold: 0.2 });
+  seen.observe(track);
 
   let ticking = false;
   const update = () => {
     ticking = false;
     if (!video.duration) return;
+    if (video.ended) arm();
     const rect = track.getBoundingClientRect();
     const run = track.offsetHeight - window.innerHeight;
     if (run <= 0) return;
     const scrolled = Math.min(Math.max(-rect.top, 0), run);
-    const t = (scrolled / run) * Math.max(video.duration - 0.05, 0);
+    const t = (scrolled / run) * Math.max(video.duration * 0.92, 0);
     if (Math.abs(video.currentTime - t) > 0.03) {
       try { video.currentTime = t; } catch (e) {}
     }
