@@ -286,22 +286,33 @@ footer a { color: #fff; text-decoration: none; }
   }
 }
 @media (max-width: 819px) {
-  .hero .btn-row { display: none; }
-  .mobile-cta { display: flex; }
-  body { padding-bottom: 84px; }
+  .mobile-cta {
+    display: flex;
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+  .dock-on .mobile-cta {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .dock-on { padding-bottom: 84px; }
   .hero {
     min-height: 0;
-    height: min(430px, calc(100svh - 210px));
+    height: min(480px, calc(100svh - 140px));
     align-items: flex-end;
   }
   .hero-img { object-position: center 12%; }
-  .hero-copy { padding: 8px 0 12px; }
+  .hero-copy { padding: 8px 0 16px; }
   h1 { font-size: clamp(44px, 14vw, 64px); }
   .hero p { font-size: 14px; }
   .photo-frame { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-in, .btn { animation: none !important; }
+  .mobile-cta { transition: none; }
   .reveal, .hero-in { opacity: 1; transform: none; transition: none; }
   .scrub { height: auto; }
   .scrub-sticky { position: relative; height: 70vh; }

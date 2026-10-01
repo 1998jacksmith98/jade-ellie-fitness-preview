@@ -80,6 +80,23 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+(function dockAfterHero() {
+  const hero = document.querySelector(".hero");
+  if (!hero) return;
+  const sync = () => {
+    if (window.innerWidth > 819) {
+      document.body.classList.remove("dock-on");
+      return;
+    }
+    const bottom = hero.getBoundingClientRect().bottom;
+    if (bottom < 90) document.body.classList.add("dock-on");
+    else document.body.classList.remove("dock-on");
+  };
+  window.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", sync);
+  sync();
+})();
+
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (!reduce) {
