@@ -77,15 +77,17 @@ h1, h2, h3 {
   gap: 5px;
   cursor: pointer;
 }
-.menu-btn span { display: block; width: 16px; height: 2px; background: var(--ink); }
+.menu-btn { position: relative; z-index: 70; }
+.menu-btn span { display: block; width: 16px; height: 2px; background: var(--ink); transition: transform 0.2s ease, opacity 0.2s ease; }
 .menu-open .menu-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .menu-open .menu-btn span:nth-child(2) { opacity: 0; }
 .menu-open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .mobile-nav {
   position: fixed; inset: 0; z-index: 40;
   background: var(--bg);
-  padding: 96px 24px 40px;
+  padding: 128px 24px 40px;
 }
+.site-header { position: relative; z-index: 60; }
 .mobile-nav nav { display: flex; flex-direction: column; gap: 8px; }
 .mobile-nav a {
   font-family: "Cormorant Garamond", Georgia, serif;
