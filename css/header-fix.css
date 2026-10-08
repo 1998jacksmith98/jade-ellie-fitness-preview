@@ -1,0 +1,10 @@
+.site-header {
+  background: #f3ede7;
+  border-bottom: 1px solid var(--line);
+}
+.brand img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
