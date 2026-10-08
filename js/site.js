@@ -1,6 +1,8 @@
 const WA = "https://wa.me/447476929022";
 const IG = "https://www.instagram.com/jadeelliefitness/";
 const BOOK = "https://bookwhen.com/jadeelliefitness";
+const ENQUIRE = "";
+const MAD = "https://maps.google.com/?q=The+MAD+Studio+5+Marechal+Niel+Parade+Sidcup";
 
 const page = location.pathname.split("/").pop() || "index.html";
 
@@ -12,28 +14,28 @@ document.getElementById("site-header").innerHTML = `
         <img src="photos/logo.jpg" alt="Jade Ellie Fitness" />
       </a>
       <nav class="desk-nav">
-        <a href="index.html" class="${page === "index.html" ? "active" : ""}">Home</a>
-        <a href="#classes">Classes</a>
+        <a href="#work">Ways to train</a>
+        <a href="#classes">Reformer</a>
+        <a href="#pt">PT</a>
         <a href="#studio">Sessions</a>
         <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="${WA}" target="_blank" rel="noreferrer">WhatsApp</a>
       </nav>
       <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
   <div class="mobile-nav" hidden>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="#classes">Classes</a>
+      <a href="#work">Ways to train</a>
+      <a href="#classes">Reformer</a>
+      <a href="#pt">PT</a>
       <a href="#studio">Sessions</a>
-      <a href="${BOOK}" target="_blank" rel="noreferrer">Book a class</a>
+      <a href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a>
       <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
-      <a href="${WA}" target="_blank" rel="noreferrer">WhatsApp</a>
     </nav>
   </div>
   <div class="mobile-cta">
-    <a class="btn" href="${WA}" target="_blank" rel="noreferrer">WhatsApp</a>
-    <a class="btn ghost" href="${BOOK}" target="_blank" rel="noreferrer">Book</a>
+    <a class="btn" data-enquire href="#enquire">Enquire</a>
+    <a class="btn ghost" href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a>
   </div>
 `;
 
@@ -42,23 +44,32 @@ document.getElementById("site-footer").innerHTML = `
     <div class="wrap footer-grid">
       <div>
         <p class="foot-name">Jade Ellie Fitness</p>
-        <p>Personal training and reformer pilates. Sidcup.</p>
-        <p>Salus House, 17 Foots Cray High Street, DA14 5HJ</p>
+        <p>Personal training and reformer pilates.</p>
+        <p><a href="${MAD}" target="_blank" rel="noreferrer">MAD Studio, 5 Marechal Niel Parade, Main Road, Sidcup DA14 6QF</a></p>
+        <p>Reformer classes: Salus House, 17 Foots Cray High Street, DA14 5HJ</p>
       </div>
       <div>
         <p><a href="${WA}" target="_blank" rel="noreferrer">WhatsApp</a></p>
-        <p><a href="${BOOK}" target="_blank" rel="noreferrer">Bookwhen</a></p>
+        <p><a href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a></p>
         <p><a href="mailto:jadeelliefitness@gmail.com">Email</a></p>
       </div>
       <div>
         <p><a href="${IG}" target="_blank" rel="noreferrer">Instagram</a></p>
-        <p><a href="#classes">Classes</a></p>
-        <p><a href="#studio">Sessions</a></p>
+        <p><a href="#classes">Reformer</a></p>
+        <p><a href="#pt">Personal training</a></p>
       </div>
     </div>
     <div class="wrap credit">Website built by <a href="https://halfpennydigital.co.uk/">Halfpenny Digital</a></div>
   </footer>
 `;
+
+if (ENQUIRE) {
+  document.querySelectorAll("[data-enquire]").forEach((link) => {
+    link.href = ENQUIRE;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+  });
+}
 
 const btn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".mobile-nav");

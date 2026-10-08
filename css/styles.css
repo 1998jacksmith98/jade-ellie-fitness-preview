@@ -149,7 +149,7 @@ h1, h2, h3 {
   margin: 0 0 10px;
   color: var(--taupe);
 }
-h1 { font-size: clamp(52px, 14vw, 108px); font-style: italic; }
+h1 { font-size: clamp(46px, 11vw, 92px); font-style: italic; }
 h2 { font-size: clamp(36px, 7vw, 64px); }
 h3 { font-size: 30px; }
 .lede { font-size: 16px; color: var(--muted); }
@@ -219,6 +219,7 @@ h3 { font-size: 30px; }
 }
 .results figure { margin: 0; overflow: hidden; background: #ddd; }
 .results img { width: 100%; height: 280px; object-fit: cover; }
+.ig-grid a { display: block; }
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -261,7 +262,7 @@ h3 { font-size: 30px; }
 footer {
   background: #3e3b38;
   color: #e8dfd6;
-  padding: 44px 0 28px;
+  padding: 44px 0 96px;
 }
 .foot-name {
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -283,8 +284,10 @@ footer a { color: #fff; text-decoration: none; }
   .about-grid { grid-template-columns: 1fr 1fr; align-items: center; }
   .cards { grid-template-columns: 1fr 1fr 1fr; }
   .results { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ig-grid { grid-template-columns: 1fr 1fr 1fr; }
   .results img { height: 340px; }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  footer { padding-bottom: 28px; }
   .brand img { height: 52px; }
   .scrub-copy {
     left: max(16px, calc((100% - 1100px) / 2));
@@ -307,14 +310,15 @@ footer a { color: #fff; text-decoration: none; }
   .dock-on { padding-bottom: 84px; }
   .hero {
     min-height: 0;
-    height: min(480px, calc(100svh - 140px));
+    height: min(520px, calc(100svh - 120px));
     align-items: flex-end;
   }
   .hero-img { object-position: center 12%; }
   .hero-copy { padding: 8px 0 16px; }
-  h1 { font-size: clamp(44px, 14vw, 64px); }
+  h1 { font-size: clamp(40px, 12vw, 58px); }
   .hero p { font-size: 14px; }
   .photo-frame { display: none; }
+  #pt .photo-frame { display: block; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-in, .btn { animation: none !important; }
