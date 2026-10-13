@@ -1,7 +1,7 @@
 const WA = "https://wa.me/447476929022";
 const IG = "https://www.instagram.com/jadeelliefitness/";
 const BOOK = "https://bookwhen.com/jadeelliefitness";
-const ENQUIRE = "";
+const ENQUIRE = "#enquire";
 const MAD = "https://maps.google.com/?q=The+MAD+Studio+5+Marechal+Niel+Parade+Sidcup";
 
 const page = location.pathname.split("/").pop() || "index.html";
@@ -65,8 +65,8 @@ document.getElementById("site-footer").innerHTML = `
 if (ENQUIRE) {
   document.querySelectorAll("[data-enquire]").forEach((link) => {
     link.href = ENQUIRE;
-    link.target = "_blank";
-    link.rel = "noreferrer";
+    link.removeAttribute("target");
+    link.removeAttribute("rel");
   });
 }
 
