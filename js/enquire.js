@@ -54,9 +54,7 @@ const answers = {};
 let index = 0;
 
 const root = document.querySelector("[data-enquire-form]");
-if (!root) {
-  /* no form on this page */
-} else {
+if (root) {
   const count = root.querySelector("[data-count]");
   const bar = root.querySelector("[data-bar]");
   const body = root.querySelector("[data-body]");
@@ -155,6 +153,9 @@ if (!root) {
         <div class="enquire-done">
           <h2 class="enquire-q">Got it.</h2>
           <p>I'll be in touch the way you asked. If it's easier, WhatsApp me on 07476 929022.</p>
+          <div class="enquire-nav">
+            <a class="btn" href="index.html">Back to site</a>
+          </div>
         </div>
       `;
       count.textContent = "Done";
