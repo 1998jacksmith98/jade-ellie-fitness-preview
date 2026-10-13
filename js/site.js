@@ -138,64 +138,54 @@ if (!reduce) {
   document.querySelectorAll(".reveal, [data-stagger] > *").forEach((el) => el.classList.add("is-in"));
 }
 
-(function scrub() {
+(function reel() {
   const track = document.querySelector(".scrub");
   const video = document.querySelector(".scrub-video");
+  const lines = [...document.querySelectorAll(".scrub-line")];
   if (!track || !video) return;
 
   video.muted = true;
-  video.loop = false;
+  video.loop = true;
+  video.playsInline = true;
   video.setAttribute("playsinline", "");
   video.setAttribute("webkit-playsinline", "");
 
-  const arm = () => {
+  const play = () => {
     video.muted = true;
-    const play = video.play();
-    if (play && play.then) {
-      play.then(() => {
-        video.pause();
-      }).catch(() => {});
-    }
+    const attempt = video.play();
+    if (attempt && attempt.catch) attempt.catch(() => {});
   };
-
-  video.addEventListener("loadeddata", arm, { once: true });
-  window.addEventListener("touchstart", arm, { passive: true });
-  window.addEventListener("click", arm);
-  video.addEventListener("ended", () => {
-    video.pause();
-    if (video.duration) video.currentTime = Math.max(video.duration * 0.9, 0);
-    arm();
-  });
 
   const seen = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) arm();
+      if (entry.isIntersecting) play();
+      else video.pause();
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.15 });
   seen.observe(track);
+  video.addEventListener("loadeddata", play);
 
-  let ticking = false;
   const update = () => {
-    ticking = false;
-    if (!video.duration) return;
-    if (video.ended) arm();
     const rect = track.getBoundingClientRect();
-    const run = track.offsetHeight - window.innerHeight;
-    if (run <= 0) return;
+    const run = Math.max(track.offsetHeight - window.innerHeight, 1);
     const scrolled = Math.min(Math.max(-rect.top, 0), run);
-    const t = (scrolled / run) * Math.max(video.duration * 0.92, 0);
-    if (Math.abs(video.currentTime - t) > 0.03) {
-      try { video.currentTime = t; } catch (e) {}
-    }
+    const t = scrolled / run;
+    lines.forEach((line, i) => {
+      const start = 0.12 + i * 0.22;
+      line.classList.toggle("is-on", t >= start);
+    });
   };
 
+  let ticking = false;
   const onScroll = () => {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(update);
+    requestAnimationFrame(() => {
+      ticking = false;
+      update();
+    });
   };
-
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
-  video.addEventListener("loadedmetadata", update);
+  update();
 })();
