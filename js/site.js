@@ -1,10 +1,11 @@
 const WA = "https://wa.me/447476929022";
 const IG = "https://www.instagram.com/jadeelliefitness/";
 const BOOK = "https://bookwhen.com/jadeelliefitness";
-const ENQUIRE = "#enquire";
+const ENQUIRE = "enquire.html";
 const MAD = "https://maps.google.com/?q=The+MAD+Studio+5+Marechal+Niel+Parade+Sidcup";
 
 const page = location.pathname.split("/").pop() || "index.html";
+const home = page === "enquire.html" ? "index.html" : "";
 
 document.getElementById("site-header").innerHTML = `
   <header class="site-header">
@@ -13,10 +14,11 @@ document.getElementById("site-header").innerHTML = `
         <img src="photos/logo.jpg" alt="Jade Ellie Fitness" />
       </a>
       <nav class="desk-nav">
-        <a href="#work">Ways to train</a>
-        <a href="#classes">Reformer</a>
-        <a href="#pt">PT</a>
-        <a href="#studio">Sessions</a>
+        <a href="${home}#work">Ways to train</a>
+        <a href="${home}#classes">Reformer</a>
+        <a href="${home}#pt">PT</a>
+        <a href="${home}#studio">Sessions</a>
+        <a href="${ENQUIRE}">Enquire</a>
         <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
       </nav>
       <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -24,16 +26,17 @@ document.getElementById("site-header").innerHTML = `
   </header>
   <div class="mobile-nav" hidden>
     <nav>
-      <a href="#work">Ways to train</a>
-      <a href="#classes">Reformer</a>
-      <a href="#pt">PT</a>
-      <a href="#studio">Sessions</a>
+      <a href="${home}#work">Ways to train</a>
+      <a href="${home}#classes">Reformer</a>
+      <a href="${home}#pt">PT</a>
+      <a href="${home}#studio">Sessions</a>
+      <a href="${ENQUIRE}">Enquire</a>
       <a href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a>
       <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
     </nav>
   </div>
   <div class="mobile-cta">
-    <a class="btn" data-enquire href="#enquire">Enquire</a>
+    <a class="btn" data-enquire href="${ENQUIRE}">Enquire</a>
     <a class="btn ghost" href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a>
   </div>
 `;
@@ -54,8 +57,8 @@ document.getElementById("site-footer").innerHTML = `
       </div>
       <div>
         <p><a href="${IG}" target="_blank" rel="noreferrer">Instagram</a></p>
-        <p><a href="#classes">Reformer</a></p>
-        <p><a href="#pt">Personal training</a></p>
+        <p><a href="${ENQUIRE}">Enquire</a></p>
+        <p><a href="${home}#pt">Personal training</a></p>
       </div>
     </div>
     <div class="wrap credit">Website built by <a href="https://halfpennydigital.co.uk/">Halfpenny Digital</a></div>
