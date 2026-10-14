@@ -5,7 +5,7 @@ const steps = [
     label: "How can I help you?",
     type: "choice",
     required: true,
-    options: ["Weight loss", "Build muscle", "Healthy lifestyle"],
+    options: ["Weight loss", "Build muscle", "Healthy lifestyle", "Not sure"],
   },
   {
     key: "gender",
@@ -39,6 +39,7 @@ const steps = [
       "Group classes",
       "Online coaching",
       "Small group / buddy PT",
+      "Reformer",
       "Not sure yet",
     ],
   },
