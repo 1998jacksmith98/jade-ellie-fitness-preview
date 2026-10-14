@@ -1,7 +1,8 @@
 @media (max-width: 819px) {
   .hero {
-    height: calc(100svh - 74px);
-    min-height: 560px;
+    height: 680px;
+    min-height: 680px;
+    max-height: 680px;
     align-items: center;
     color: var(--ink);
     background: #f3ede7;
@@ -10,7 +11,10 @@
     left: auto !important;
     right: 0 !important;
     width: 58% !important;
-    object-position: 72% 20%;
+    height: 680px !important;
+    object-position: 28% 22%;
+    transform: none !important;
+    transition: none !important;
   }
   .hero::after {
     background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 28%, rgba(243, 237, 231, 0.85) 46%, rgba(243, 237, 231, 0) 68%);
@@ -67,7 +71,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 70% 18%;
+    object-position: 34% 18%;
+    transform: none !important;
   }
   #about::after {
     content: "";
