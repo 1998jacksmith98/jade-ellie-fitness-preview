@@ -57,8 +57,7 @@
     background: #f3ede7;
   }
   #about .wrap {
-    position: relative !important;
-    z-index: 2;
+    position: static !important;
     width: 46% !important;
     max-width: 190px;
     height: 680px;
@@ -87,7 +86,7 @@
     width: 100% !important;
     height: 680px !important;
     object-fit: cover;
-    object-position: 58% 22%;
+    object-position: 84% 22%;
     transform: none !important;
   }
   #about::after {
