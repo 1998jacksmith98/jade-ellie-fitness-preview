@@ -1,15 +1,2 @@
-.scrub-line {
-  display: block;
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
-.scrub-line.is-on {
-  opacity: 1;
-  transform: none;
-}
-.scrub-copy h2 {
-  font-size: clamp(42px, 9vw, 88px);
-  font-style: italic;
-  line-height: 0.9;
-}
+.hero .kicker { color: #fff; }
+.scrub-copy .kicker { color: #fff; }
