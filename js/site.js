@@ -1,8 +1,10 @@
 const WA = "https://wa.me/447476929022";
+const WA_GROUP = "https://chat.whatsapp.com/F4NZ916MHPY9FshHsHrJ7d";
 const IG = "https://www.instagram.com/jadeelliefitness/";
 const BOOK = "https://bookwhen.com/jadeelliefitness";
 const ENQUIRE = "enquire.html";
 const MAD = "https://maps.google.com/?q=The+MAD+Studio+5+Marechal+Niel+Parade+Sidcup";
+const EMAIL = "mailto:jadeelliefitness@gmail.com";
 
 const page = location.pathname.split("/").pop() || "index.html";
 const home = page === "enquire.html" ? "index.html" : "";
@@ -52,8 +54,9 @@ document.getElementById("site-footer").innerHTML = `
       </div>
       <div>
         <p><a href="${WA}" target="_blank" rel="noreferrer">WhatsApp</a></p>
+        <p><a href="${WA_GROUP}" target="_blank" rel="noreferrer">Join the girls group</a></p>
         <p><a href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a></p>
-        <p><a href="mailto:jadeelliefitness@gmail.com">Email</a></p>
+        <p><a href="${EMAIL}">jadeelliefitness@gmail.com</a></p>
       </div>
       <div>
         <p><a href="${IG}" target="_blank" rel="noreferrer">Instagram</a></p>
