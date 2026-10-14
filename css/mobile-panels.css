@@ -18,7 +18,7 @@
   }
   .hero::after {
     z-index: 1;
-    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 30%, rgba(243, 237, 231, 0.92) 42%, rgba(243, 237, 231, 0.45) 56%, rgba(243, 237, 231, 0) 72%);
+    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 46%, rgba(243, 237, 231, 0.96) 54%, rgba(243, 237, 231, 0.55) 66%, rgba(243, 237, 231, 0) 80%);
   }
   .hero-copy.wrap {
     position: relative;
@@ -83,7 +83,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 30%, rgba(243, 237, 231, 0.92) 42%, rgba(243, 237, 231, 0.45) 56%, rgba(243, 237, 231, 0) 72%);
+    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 46%, rgba(243, 237, 231, 0.96) 54%, rgba(243, 237, 231, 0.55) 66%, rgba(243, 237, 231, 0) 80%);
     pointer-events: none;
   }
 }
