@@ -57,7 +57,7 @@
     background: #f3ede7;
   }
   #about .wrap {
-    position: static !important;
+    position: relative !important;
     z-index: 2;
     width: 46% !important;
     max-width: 190px;
@@ -68,6 +68,10 @@
     align-items: center;
   }
   #about .about-grid { display: block; }
+  #about .about-grid > div {
+    position: relative;
+    z-index: 2;
+  }
   #about .about-photo {
     position: absolute !important;
     top: 0 !important;
@@ -83,7 +87,7 @@
     width: 100% !important;
     height: 680px !important;
     object-fit: cover;
-    object-position: 72% 22%;
+    object-position: 58% 22%;
     transform: none !important;
   }
   #about::after {
