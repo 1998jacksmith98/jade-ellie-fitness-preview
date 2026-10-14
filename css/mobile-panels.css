@@ -77,7 +77,7 @@
     right: 0 !important;
     bottom: 0 !important;
     left: auto !important;
-    width: 50% !important;
+    width: 46% !important;
     height: 680px !important;
     margin: 0 !important;
     z-index: 0;
@@ -86,7 +86,7 @@
     width: 100% !important;
     height: 680px !important;
     object-fit: cover;
-    object-position: 84% 22%;
+    object-position: 48% 22%;
     transform: none !important;
   }
   #about::after {
@@ -94,7 +94,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 1;
-    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 50%, rgba(243, 237, 231, 0.75) 56%, rgba(243, 237, 231, 0) 64%) !important;
+    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 52%, rgba(243, 237, 231, 0.7) 58%, rgba(243, 237, 231, 0) 66%) !important;
     pointer-events: none;
   }
 }
