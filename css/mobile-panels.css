@@ -10,16 +10,19 @@
   .hero-img {
     left: auto !important;
     right: 0 !important;
-    width: 58% !important;
+    width: 62% !important;
     height: 680px !important;
-    object-position: 28% 22%;
+    object-position: 38% 22%;
     transform: none !important;
     transition: none !important;
   }
   .hero::after {
-    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 28%, rgba(243, 237, 231, 0.85) 46%, rgba(243, 237, 231, 0) 68%);
+    z-index: 1;
+    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 30%, rgba(243, 237, 231, 0.92) 42%, rgba(243, 237, 231, 0.45) 56%, rgba(243, 237, 231, 0) 72%);
   }
   .hero-copy.wrap {
+    position: relative;
+    z-index: 2;
     width: 46%;
     max-width: 190px;
     margin: 0;
@@ -50,7 +53,7 @@
   }
   #about .wrap {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 46%;
     max-width: 190px;
     min-height: 620px;
@@ -64,21 +67,23 @@
   #about .about-photo {
     position: absolute;
     inset: 0 0 0 auto;
-    width: 58%;
+    width: 62%;
     margin: 0;
+    z-index: 0;
   }
   #about .about-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 34% 18%;
+    object-position: 42% 18%;
     transform: none !important;
   }
   #about::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 28%, rgba(243, 237, 231, 0.85) 46%, rgba(243, 237, 231, 0) 68%);
+    z-index: 1;
+    background: linear-gradient(90deg, #f3ede7 0%, #f3ede7 30%, rgba(243, 237, 231, 0.92) 42%, rgba(243, 237, 231, 0.45) 56%, rgba(243, 237, 231, 0) 72%);
     pointer-events: none;
   }
 }
