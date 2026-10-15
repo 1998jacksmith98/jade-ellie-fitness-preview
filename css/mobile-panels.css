@@ -10,10 +10,10 @@
   .hero-img {
     left: auto !important;
     right: 0 !important;
-    top: -18% !important;
+    top: -32% !important;
     width: 62% !important;
-    height: 145% !important;
-    object-position: 32% 50%;
+    height: 160% !important;
+    object-position: 32% 0%;
     transform: none !important;
     transition: none !important;
   }
