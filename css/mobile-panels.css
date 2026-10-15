@@ -41,6 +41,13 @@
   .hero .kicker { margin-bottom: 16px; }
   .hero h1 { font-size: clamp(32px, 9vw, 44px); margin-bottom: 14px; }
   .hero p { font-size: 12.5px; line-height: 1.4; margin-top: 0; margin-bottom: 6px; }
+  .hero .hero-tag {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
   .hero .btn-row {
     gap: 8px;
     margin-top: 18px;
