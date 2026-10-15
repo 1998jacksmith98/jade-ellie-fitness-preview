@@ -80,9 +80,9 @@
     max-width: 190px;
     height: 680px;
     margin: 0 !important;
-    padding: 16px 4px 16px 14px;
+    padding: 170px 4px 16px 14px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   #about .about-grid { display: block; }
   #about .about-grid > div {
