@@ -172,4 +172,5 @@
     border-color: var(--ink);
     background: transparent;
   }
+  #about .about-photo { order: -1; }
 }
