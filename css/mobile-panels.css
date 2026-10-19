@@ -149,6 +149,7 @@
     margin: 0;
     overflow: hidden;
     background: #ddd;
+    border-radius: 16px;
   }
   .hero-photo img {
     width: 100%;
@@ -156,6 +157,7 @@
     object-fit: cover;
     min-height: 520px;
     object-position: center 30%;
+    border-radius: 16px;
   }
   .hero-copy { padding: 0; }
   .hero .kicker { color: var(--taupe); }
@@ -175,4 +177,13 @@
     background: transparent;
   }
   #about .about-photo { order: -1; }
+  #about .about-photo img {
+    border-radius: 16px;
+  }
+  #work .photo-frame {
+    border-radius: 16px;
+  }
+  #work .photo-frame img {
+    border-radius: 16px;
+  }
 }
