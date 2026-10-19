@@ -90,9 +90,9 @@
     max-width: 190px;
     height: 680px;
     margin: 0 0 0 auto !important;
-    padding: 170px 14px 16px 4px;
+    padding: 0 14px 0 4px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
   }
   #about .about-grid { display: block; }
@@ -101,6 +101,7 @@
     z-index: 2;
     text-align: right;
   }
+  #about .about-more { display: none; }
   #about .about-photo {
     position: absolute !important;
     top: 0 !important;
