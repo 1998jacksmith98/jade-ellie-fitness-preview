@@ -15,3 +15,4 @@ action-10.jpg | https://www.instagram.com/p/DJR_0BpouJl/ | 1 | Jade on HYROX Lon
 ../videos/jade-ellie-reel.mp4 | https://www.instagram.com/reel/DdVx5gds-0t/ | n/a | Reel "It's not just about how your body looks..." 720x1280 H.264 + AAC, 12.3s
 ../brand/font-evidence/DS71qcsDKCQ-overlay.jpg | https://www.instagram.com/p/DS71qcsDKCQ/ | 1 | Font evidence: "NOW IT'S YOUR TURN TO BECOME / the best VERSION OF YOU" overlay
 ../brand/font-evidence/DSukvwHimvU-overlay.jpg | https://www.instagram.com/p/DSukvwHimvU/ | 1 | Font evidence: "BECOME THE BEST VERSION OF YOU / train with me / 1:1, with a friend, or join a class"
+jade-lunge-stretch-gym.jpg | Jack-supplied 19 Oct 2026 | n/a | Jade in burgundy set doing a low lunge hip-flexor stretch on a mat in an industrial gym (1166x2048)

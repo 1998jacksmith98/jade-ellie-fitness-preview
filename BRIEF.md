@@ -46,6 +46,7 @@ All photos are full originals from the post/story JSON (largest candidate, uncro
 | photos/action-08.jpg | 1440x1800 | https://www.instagram.com/p/DU_LeV_iunV/ — Jade on reformer |
 | photos/action-09.jpg | 1179x2096 | "pt sessions" highlight story — Jade + client, "train with a friend" overlay |
 | photos/action-10.jpg | 1440x1800 | https://www.instagram.com/p/DJR_0BpouJl/ — HYROX London podium |
+| photos/jade-lunge-stretch-gym.jpg | 1166x2048 | Jack-supplied 19 Oct 2026 — Jade in burgundy set, low lunge hip-flexor stretch on mat, industrial gym |
 | videos/jade-ellie-reel.mp4 | 720x1280, 12.3s, H.264+AAC | https://www.instagram.com/reel/DdVx5gds-0t/ (direct CDN mp4, with audio) |
 | brand/font-evidence/*.jpg | — | Logo + 2 overlay posts used for font guesses |
 | photos/shot-list.txt | — | filename / source / slide / description |
