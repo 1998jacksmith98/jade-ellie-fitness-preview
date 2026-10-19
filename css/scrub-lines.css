@@ -17,6 +17,7 @@
 .scrub-copy .kicker {
   color: #fff;
 }
+.scrub-copy.right { display: none; }
 
 @media (min-width: 820px) {
   .scrub-video,
@@ -26,5 +27,23 @@
   }
   .scrub-shade {
     background: linear-gradient(180deg, rgba(42, 38, 36, 0.1) 0%, rgba(42, 38, 36, 0.4) 100%);
+  }
+  .scrub-copy {
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    width: 22%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 3;
+  }
+  .scrub-copy.right {
+    display: block;
+    left: auto;
+    right: 0;
+  }
+  .scrub-copy h2 {
+    font-size: clamp(28px, 3.2vw, 48px);
   }
 }
