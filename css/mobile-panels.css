@@ -149,7 +149,9 @@
     margin: 0;
     overflow: hidden;
     background: #ddd;
-    border-radius: 16px;
+    border-radius: 32px;
+    outline: 1.5px solid var(--taupe);
+    outline-offset: 7px;
   }
   .hero-photo img {
     width: 100%;
@@ -157,7 +159,7 @@
     object-fit: cover;
     min-height: 520px;
     object-position: center 30%;
-    border-radius: 16px;
+    border-radius: 32px;
   }
   .hero-copy { padding: 0; }
   .hero .kicker { color: var(--taupe); }
@@ -176,14 +178,20 @@
     border-color: var(--ink);
     background: transparent;
   }
-  #about .about-photo { order: -1; }
+  #about .about-photo {
+    border-radius: 32px;
+    outline: 1.5px solid var(--taupe);
+    outline-offset: 7px;
+  }
   #about .about-photo img {
-    border-radius: 16px;
+    border-radius: 32px;
   }
   #work .photo-frame {
-    border-radius: 16px;
+    border-radius: 32px;
+    outline: 1.5px solid var(--taupe);
+    outline-offset: 7px;
   }
   #work .photo-frame img {
-    border-radius: 16px;
+    border-radius: 32px;
   }
 }
