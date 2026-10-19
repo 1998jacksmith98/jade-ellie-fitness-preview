@@ -90,7 +90,7 @@
     max-width: 190px;
     height: 680px;
     margin: 0 0 0 auto !important;
-    padding: 40px 14px 16px 4px;
+    padding: 20px 14px 16px 4px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
@@ -179,7 +179,12 @@
     border-color: var(--ink);
     background: transparent;
   }
+  #about .about-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
   #about .about-photo {
+    order: -1;
     border-radius: 32px;
     outline: 1.5px solid var(--taupe);
     outline-offset: 7px;
