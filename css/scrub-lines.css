@@ -17,3 +17,37 @@
 .scrub-copy .kicker {
   color: #fff;
 }
+
+@media (min-width: 820px) {
+  .scrub-sticky {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scrub-video,
+  .scrub-fallback {
+    position: relative;
+    inset: auto;
+    width: min(440px, 38vw);
+    height: auto;
+    max-height: 86svh;
+    object-fit: contain;
+    border-radius: 18px;
+    z-index: 1;
+  }
+  .scrub-shade {
+    background: linear-gradient(180deg, rgba(42, 38, 36, 0.15) 0%, rgba(42, 38, 36, 0.35) 100%);
+  }
+  .scrub-copy {
+    left: 50%;
+    right: auto;
+    bottom: 8%;
+    width: min(440px, 38vw);
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3;
+  }
+  .scrub-copy h2 {
+    font-size: clamp(36px, 4vw, 56px);
+  }
+}
