@@ -149,7 +149,9 @@ if (!reduce) {
 (function reel() {
   const track = document.querySelector(".scrub");
   const video = document.querySelector(".scrub-video");
-  const lines = [...document.querySelectorAll(".scrub-line")];
+  const groups = [...document.querySelectorAll(".scrub-copy")].map((copy) =>
+    [...copy.querySelectorAll(".scrub-line")]
+  );
   if (!track || !video) return;
 
   video.muted = true;
@@ -178,9 +180,11 @@ if (!reduce) {
     const run = Math.max(track.offsetHeight - window.innerHeight, 1);
     const scrolled = Math.min(Math.max(-rect.top, 0), run);
     const t = scrolled / run;
-    lines.forEach((line, i) => {
-      const start = 0.12 + i * 0.22;
-      line.classList.toggle("is-on", t >= start);
+    groups.forEach((lines) => {
+      lines.forEach((line, i) => {
+        const start = 0.12 + i * 0.22;
+        line.classList.toggle("is-on", t >= start);
+      });
     });
   };
 
