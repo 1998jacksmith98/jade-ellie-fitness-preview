@@ -20,6 +20,7 @@ document.getElementById("site-header").innerHTML = `
         <a href="${home}#classes">Reformer</a>
         <a href="${home}#pt">PT</a>
         <a href="${home}#studio">Sessions</a>
+        <a href="${home}#reviews">Reviews</a>
         <a href="${ENQUIRE}">Enquire</a>
         <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
       </nav>
@@ -32,6 +33,7 @@ document.getElementById("site-header").innerHTML = `
       <a href="${home}#classes">Reformer</a>
       <a href="${home}#pt">PT</a>
       <a href="${home}#studio">Sessions</a>
+      <a href="${home}#reviews">Reviews</a>
       <a href="${ENQUIRE}">Enquire</a>
       <a href="${BOOK}" target="_blank" rel="noreferrer">Book reformer</a>
       <a href="${IG}" target="_blank" rel="noreferrer">Instagram</a>
@@ -194,4 +196,34 @@ if (!reduce) {
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
   update();
+})();
+
+(function reviews() {
+  const scroller = document.getElementById("quote-scroller");
+  const track = document.getElementById("quotes");
+  const dots = document.getElementById("quote-dots");
+  if (!scroller || !track || !dots) return;
+  const cards = [...track.children];
+  const buttons = cards.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Review " + (i + 1));
+    b.addEventListener("click", () => cards[i].scrollIntoView({ behavior: reduce ? "auto" : "smooth", inline: "center", block: "nearest" }));
+    dots.appendChild(b);
+    return b;
+  });
+  const mark = () => {
+    const mid = scroller.scrollLeft + scroller.clientWidth / 2;
+    let best = 0;
+    let bestDist = Infinity;
+    cards.forEach((card, i) => {
+      const center = card.offsetLeft + card.offsetWidth / 2;
+      const dist = Math.abs(center - mid);
+      card.classList.toggle("is-active", dist < card.offsetWidth * 0.45);
+      if (dist < bestDist) { bestDist = dist; best = i; }
+    });
+    buttons.forEach((b, i) => b.classList.toggle("is-on", i === best));
+  };
+  mark();
+  scroller.addEventListener("scroll", mark, { passive: true });
 })();
