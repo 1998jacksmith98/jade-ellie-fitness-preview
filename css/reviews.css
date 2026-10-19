@@ -1,0 +1,70 @@
+.quote-scroller {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 8%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin: 0 -8px;
+  padding: 8px 0 4px;
+}
+.quote-scroller::-webkit-scrollbar { display: none; }
+.quotes {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  padding: 0 7vw 8px;
+  margin: 0;
+}
+.quote {
+  flex: 0 0 min(78vw, 360px);
+  scroll-snap-align: center;
+  opacity: 0.38;
+  transform: scale(0.96);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin: 0;
+}
+.quote.is-active { opacity: 1; transform: none; }
+.quote .stars {
+  margin: 0 0 10px;
+  color: var(--taupe);
+  letter-spacing: 0.08em;
+  font-size: 14px;
+}
+.quote blockquote {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #5c564f;
+}
+.quote figcaption {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 500;
+}
+.quote-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.quote-dots button {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(62, 59, 56, 0.22);
+  cursor: pointer;
+}
+.quote-dots button.is-on { background: var(--taupe); }
+@media (min-width: 820px) {
+  .quotes { padding: 0 12px 8px; }
+  .quote { flex-basis: 340px; }
+}
