@@ -66,7 +66,7 @@ document.getElementById("site-footer").innerHTML = `
         <p><a href="${home}#pt">Personal training</a></p>
       </div>
     </div>
-    <div class="wrap credit">Website built by <a href="https://halfpennydigital.co.uk/">Halfpenny Digital</a></div>
+    <div class="wrap credit">Website built by <a href="https://halfpennydigital.co.uk/">Halfpenny Digital</a> · <a href="privacy.html">Privacy policy</a></div>
   </footer>
 `;
 
