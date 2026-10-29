@@ -65,6 +65,6 @@
 }
 .quote-dots button.is-on { background: var(--taupe); }
 @media (min-width: 820px) {
-  .quotes { padding: 0 12px 8px; }
+  .quotes { padding: 0 calc(50% - 170px) 8px; }
   .quote { flex-basis: 340px; }
 }
