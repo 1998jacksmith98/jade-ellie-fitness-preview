@@ -101,6 +101,11 @@
     z-index: 2;
     text-align: right;
   }
+  #about .about-grid > div p {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
   #about .about-more { display: none; }
   #about .about-photo {
     position: absolute !important;
