@@ -216,6 +216,10 @@ if (!reduce) {
     dots.appendChild(b);
     return b;
   });
+  cards.forEach((card) => {
+    card.style.cursor = "pointer";
+    card.addEventListener("click", () => card.scrollIntoView({ behavior: reduce ? "auto" : "smooth", inline: "center", block: "nearest" }));
+  });
   const mark = () => {
     const mid = scroller.scrollLeft + scroller.clientWidth / 2;
     let best = 0;
