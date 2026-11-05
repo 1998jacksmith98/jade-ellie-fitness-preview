@@ -1,33 +1,15 @@
 const steps = [
-  { key: "name", label: "What's your name?", type: "text", required: true, placeholder: "Your name" },
+  { key: "name", label: "What’s your name?", type: "text", required: true, placeholder: "Your name" },
   {
-    key: "help",
-    label: "How can I help you?",
-    type: "choice",
+    key: "contact_details",
+    label: "What’s your contact details?",
+    type: "group",
     required: true,
-    options: ["Weight loss", "Build muscle", "Healthy lifestyle", "Not sure"],
-  },
-  {
-    key: "gender",
-    label: "Are you",
-    type: "choice",
-    options: ["Male", "Female", "Prefer not to say"],
-  },
-  {
-    key: "age",
-    label: "How old are you?",
-    type: "choice",
-    options: ["20 or below", "21–30", "Over 30", "Prefer not to say"],
-  },
-  { key: "email", label: "What's your email?", type: "email", required: true, placeholder: "you@email.com" },
-  { key: "phone", label: "What's the best number for you?", type: "tel", required: true, placeholder: "07..." },
-  { key: "instagram", label: "What's your Instagram?", type: "text", required: true, placeholder: "@yourhandle" },
-  {
-    key: "contact",
-    label: "How should I get back to you?",
-    type: "choice",
-    required: true,
-    options: ["Email", "Text / WhatsApp", "Call", "Instagram"],
+    fields: [
+      { key: "email", label: "Email address", type: "email", placeholder: "you@email.com", required: true },
+      { key: "phone", label: "Phone number", type: "tel", placeholder: "07..." },
+      { key: "instagram", label: "Instagram", type: "text", placeholder: "@yourhandle" },
+    ],
   },
   {
     key: "interest",
@@ -35,19 +17,26 @@ const steps = [
     type: "choice",
     required: true,
     options: [
-      "1-2-1 PT sessions",
-      "Group classes",
-      "Online coaching",
-      "Small group / buddy PT",
-      "Reformer",
+      "1:1 Personal Training",
+      "Buddy / Small Group PT",
+      "Reformer Pilates",
+      "Private Reformer Pilates",
       "Not sure yet",
     ],
   },
   {
-    key: "why",
-    label: "What's holding you back, and what's making you start now?",
+    key: "journey",
+    label: "Tell me about your current fitness journey and what you’d like help with.",
     type: "textarea",
+    required: true,
     placeholder: "A few lines is plenty.",
+  },
+  {
+    key: "prefer",
+    label: "How would you prefer me to contact you?",
+    type: "choice",
+    required: true,
+    options: ["WhatsApp", "Text", "Email", "Instagram"],
   },
 ];
 
@@ -63,13 +52,13 @@ if (root) {
 
   function render() {
     const step = steps[index];
-    const value = answers[step.key] || "";
     count.textContent = `${index + 1} of ${steps.length}`;
     bar.style.width = `${((index + 1) / steps.length) * 100}%`;
     error.textContent = "";
 
     let field = "";
     if (step.type === "choice") {
+      const value = answers[step.key] || "";
       field = `<div class="enquire-choices">${step.options
         .map(
           (option) =>
@@ -77,16 +66,25 @@ if (root) {
         )
         .join("")}</div>`;
     } else if (step.type === "textarea") {
-      field = `<textarea class="enquire-area" data-input placeholder="${step.placeholder || ""}">${value}</textarea>`;
+      field = `<textarea class="enquire-area" data-input placeholder="${step.placeholder || ""}">${answers[step.key] || ""}</textarea>`;
+    } else if (step.type === "group") {
+      field = step.fields
+        .map(
+          (f) => `
+          <label class="enquire-label">${f.label}</label>
+          <input class="enquire-input" data-input data-key="${f.key}" type="${f.type}" placeholder="${f.placeholder || ""}" value="${answers[f.key] || ""}" />
+        `,
+        )
+        .join("");
     } else {
-      field = `<input class="enquire-field" data-input type="${step.type}" value="${value}" placeholder="${step.placeholder || ""}" />`;
+      field = `<input class="enquire-input" data-input type="${step.type}" placeholder="${step.placeholder || ""}" value="${answers[step.key] || ""}" />`;
     }
 
     body.innerHTML = `
       <h2 class="enquire-q">${step.label}</h2>
       ${field}
       <div class="enquire-nav">
-        <button type="button" class="enquire-back" data-back ${index === 0 ? "hidden" : ""}>Back</button>
+        <button type="button" class="btn ghost" data-back ${index === 0 ? "hidden" : ""}>Back</button>
         <button type="button" class="btn" data-next>${index === steps.length - 1 ? "Send" : "Next"}</button>
       </div>
     `;
@@ -113,17 +111,26 @@ if (root) {
 
   function save() {
     const step = steps[index];
-    const input = body.querySelector("[data-input]");
-    if (input) answers[step.key] = input.value.trim();
+    if (step.type === "group") {
+      body.querySelectorAll("[data-input]").forEach((input) => {
+        answers[input.dataset.key] = input.value.trim();
+      });
+    } else {
+      const input = body.querySelector("[data-input]");
+      if (input) answers[step.key] = input.value.trim();
+    }
   }
 
   function valid() {
     const step = steps[index];
+    if (step.type === "group") {
+      const email = answers.email || "";
+      if (step.required && !email) return "Please add your email address.";
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return "That email doesn't look right.";
+      return "";
+    }
     const value = answers[step.key] || "";
     if (step.required && !value) return "This one needs an answer.";
-    if (step.type === "email" && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      return "That email doesn't look right.";
-    }
     return "";
   }
 
@@ -152,8 +159,9 @@ if (root) {
       if (!res.ok) throw new Error("send failed");
       body.innerHTML = `
         <div class="enquire-done">
-          <h2 class="enquire-q">Got it.</h2>
-          <p>I'll be in touch the way you asked. If it's easier, WhatsApp me on 07476 929022.</p>
+          <h2 class="enquire-q">Thank you for your enquiry!</h2>
+          <p>I’ll be in touch shortly. If you have any questions in the meantime, you can reach me directly on WhatsApp at 07476 929022.</p>
+          <p>Jade Ellie🤍</p>
           <div class="enquire-nav">
             <a class="btn" href="index.html">Back to site</a>
           </div>
