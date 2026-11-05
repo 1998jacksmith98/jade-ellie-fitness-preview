@@ -20,15 +20,12 @@ export default async function handler(req, res) {
 
   const rows = [
     ["Name", name],
-    ["How can I help", body.help],
-    ["Are you", body.gender],
-    ["Age", body.age],
     ["Email", email],
     ["Phone", body.phone],
     ["Instagram", body.instagram],
-    ["Contact preference", body.contact],
     ["Interested in", body.interest],
-    ["What's holding them back", body.why],
+    ["Fitness journey", body.journey],
+    ["Preferred contact", body.prefer],
   ]
     .filter(([, value]) => value)
     .map(([label, value]) => `${label}: ${value}`)
