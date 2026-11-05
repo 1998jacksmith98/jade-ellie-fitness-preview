@@ -101,3 +101,24 @@
 @media (min-width: 820px) {
   .enquire-card { padding: 40px 40px 32px; }
 }
+
+.enquire-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 16px 0 4px;
+}
+.enquire-input {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  padding: 10px 0;
+  outline: none;
+  margin-bottom: 8px;
+}
