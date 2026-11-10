@@ -21,8 +21,6 @@ const steps = [
       "Buddy / Small Group PT",
       "Reformer Pilates",
       "Private Reformer Pilates",
-      "Online Training Plans",
-      "Online Nutrition Coaching",
       "Not sure yet",
     ],
   },
