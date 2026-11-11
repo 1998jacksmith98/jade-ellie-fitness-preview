@@ -1,6 +1,7 @@
 const WA = "https://wa.me/447476929022";
 const WA_GROUP = "https://chat.whatsapp.com/F4NZ916MHPY9FshHsHrJ7d";
 const IG = "https://www.instagram.com/jadeelliefitness/";
+const GBP = "https://www.google.com/maps/search/?api=1&query=Jade+Ellie+Fitness+Sidcup";
 const BOOK = "https://bookwhen.com/jadeelliefitness";
 const ENQUIRE = "enquire.html";
 const MAD = "https://maps.google.com/?q=The+MAD+Studio+5+Marechal+Niel+Parade+Sidcup";
@@ -62,6 +63,7 @@ document.getElementById("site-footer").innerHTML = `
       </div>
       <div>
         <p><a href="${IG}" target="_blank" rel="noreferrer">Instagram</a></p>
+        <p><a href="${GBP}" target="_blank" rel="noreferrer">Google reviews</a></p>
         <p><a href="${ENQUIRE}">Enquire</a></p>
         <p><a href="${home}#pt">Personal training</a></p>
       </div>
