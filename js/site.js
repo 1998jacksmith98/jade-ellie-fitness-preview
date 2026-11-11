@@ -63,7 +63,7 @@ document.getElementById("site-footer").innerHTML = `
       </div>
       <div>
         <p><a href="${IG}" target="_blank" rel="noreferrer">Instagram</a></p>
-        <p><a href="${GBP}" target="_blank" rel="noreferrer">Google reviews</a></p>
+        <p><a href="${GBP}" target="_blank" rel="noreferrer">Find me on Google</a></p>
         <p><a href="${ENQUIRE}">Enquire</a></p>
         <p><a href="${home}#pt">Personal training</a></p>
       </div>
